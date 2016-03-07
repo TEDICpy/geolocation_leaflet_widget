@@ -114,7 +114,7 @@ function geolocation_leaflet_widget_field_formatter_info() {
   return array(
     'geolocation_leaflet_widget_map' => array(
       'label' => t('Leaflet Map'),
-      'field types' => array('geolocation_latlng'),
+      'field types' => array('geolocation_latlng','geofield'),
       'settings' => array(
         'map_width' => '100%',
         'map_height' => '300px',
@@ -239,7 +239,7 @@ function geolocation_leaflet_widget_field_widget_info() {
   return array(
     'geolocation_leaflet_widget' => array(
       'label' => t('Leaflet widget'),
-      'field types' => array('geolocation_latlng'),
+      'field types' => array('geolocation_latlng','geofield'),
       'settings' => array(
         'scrollwheel' => TRUE,
         'zoom' => '7',
