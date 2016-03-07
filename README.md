@@ -7,5 +7,5 @@ A [Drupal](https://www.drupal.org/) module to add a widget based on [Leaflet](ht
 <!-- * Activar módulo y sus dependencias. -->
 * Once activated the module are available for the *geolocation field*
 <!-- * Una vez activado quedan disponibles para el field *geolocation*: -->
-  * The tipo de control **Leaflet Widget** que permite insertar y arrastrar un marker al precionar sobre el mapa.
-  * El formato de presentación **Leaflet Map** que despliega el mapa con el marker en el centro.
+  * The control type **Leaflet Widget** that allows insert and drag a marker by clicking the map .
+  * The formatter **Leaflet Map** for display the point on a leaflet map.
