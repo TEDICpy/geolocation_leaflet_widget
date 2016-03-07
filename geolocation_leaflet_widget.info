@@ -1,0 +1,6 @@
+name = Geolocation Leaflet Widget
+description = geolocation_leaflet_widget
+package = Geolocation
+core = 7.x
+; files[] = field_example.test
+dependencies[] = geolocation
