@@ -240,6 +240,11 @@ function geolocation_leaflet_widget_field_widget_info() {
     'geolocation_leaflet_widget' => array(
       'label' => t('Leaflet widget'),
       'field types' => array('geolocation_latlng'),
+      'settings' => array(
+        'scrollwheel' => TRUE,
+        'zoom' => '7',
+        'map_height' => '300px',
+      ),
     ),
   );
 }
@@ -281,18 +286,14 @@ function geolocation_leaflet_widget_field_widget_settings_form($field, $instance
     '#description' => t('Choose a custom zoom level - the higher the number the closer. <em>High zoom warning:</em> Google might not return images for any combination of Map Type and Zoom Level.'),
     '#default_value' => $settings['zoom'],
   );
-  // $form['zoom'] = array(
-  //   '#type' => 'textfield',
-  //   '#title' => t('Default Zoom'),
-  //   '#description' => t('Default zoom value.'),
-  //   '#default_value' => isset($settings['zoom']) ? $settings['zoom'] : 10,
-  // );
-  // $form['marker_draggable'] = array(
-  //   '#type' => 'checkbox',
-  //   '#title' => t('Draggable Marker'),
-  //   '#description' => t('Enabling this will allow the user to drag/drop the marker to select a location.'),
-  //   '#default_value' => isset($settings['marker_draggable']) ? $settings['marker_draggable'] : FALSE,
-  // );
+
+  $form['map_height'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Map height'),
+    '#description' => t('Enter custom map height (e.g. 300px or 300%), default is 300px. Percentages do not work with static maps.'),
+    '#default_value' => $settings['map_height'],
+  );
+
 
   return $form;
 }
