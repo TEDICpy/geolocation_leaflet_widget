@@ -20,7 +20,11 @@
 
           $("#geolocation-map-" + i, context).height(mapOptions.map_height);
           var map = L.map("geolocation-map-" + i).setView(latlng, mapOptions.zoom);
-          L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		var southWest = L.latLng(-25.36698451622012, -57.676849365234375),
+            	northEast = L.latLng(-25.224820176765036, -57.51960754394531);
+map.setMaxBounds([southWest, northEast]);
+
+          L.tileLayer('//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
           }).addTo(map);
